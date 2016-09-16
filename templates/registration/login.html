@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+
+{% block navbar-menu %}{% endblock navbar-menu %}
+
+{% block title %}Login{% endblock title %}
+
+{% block content %}
+    <form class="" action="" method="post" class="text-center">
+        {{ form }}
+        {% csrf_token %}
+        <button type="button" name="button" class="btn btn-default">Login</button>
+    </form>
+{% endblock content %}

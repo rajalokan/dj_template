@@ -1,0 +1,25 @@
+<!-- Header -->
+<header>
+    <nav class="navbar navbar-fixed-top navbar-custom">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">MultiChat</a>
+            </div>
+            {% block navbar-menu %}
+                <div class="navbar-collapse">
+                    {% if user.is_authenticated %}
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><p>Hello Okan</p></li>
+                            <li><a href="#" class="btn btn-default navbar-btn">Logout</a></li>
+                        </ul>
+                    {% else %}
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="{% url 'login' %}" class="btn btn-default navbar-btn">Login</a></li>
+                            <li><a href="#" class="btn btn-default navbar-btn">Register</a></li>
+                        </ul>
+                    {% endif %}
+                </div>
+            {% endblock navbar-menu %}
+        </div>
+    </nav>
+</header>
